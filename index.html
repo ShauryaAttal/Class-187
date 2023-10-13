@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Marker based AR Portfolio</title>
+
+    <!-- Import A-Frame and then AR.js -->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+
+  <body style="margin: 0px; overflow: hidden">
+    <!-- A-frame scene -->
+    <a-scene
+      vr-mode-ui="enabled:false"
+      embedded
+      arjs="sourceType: webcam; debugUIEnabled: false; displayWidth: 1280; displayHeight: 960; sourceWidth: 1280; sourceHeight: 960"
+      id="scene"
+    >
+      <a-marker
+        type="pattern"
+        url="pattern-markers/flightsim/pattern-icon-01.patt"
+      >
+        <a-plane
+          src="#flightsim"
+          width="2"
+          height="1.5"
+          position="0 0 -2"
+          rotation="-90 0 0"
+        >
+        </a-plane>
+      </a-marker>
+
+      <a-marker
+        type="pattern"
+        url="pattern-markers/virtualtour/pattern-icon-04.patt"
+      >
+        <a-plane
+          src="#tour"
+          width="2"
+          height="1.5"
+          position="0 0 -2"
+          rotation="-90 0 0"
+        >
+        </a-plane>
+      </a-marker>
+
+      <a-marker
+        type="pattern"
+        url="pattern-markers/shootinggame/pattern-icon-06.patt"
+      >
+        <a-plane
+          src="#shooting"
+          width="2"
+          height="1.5"
+          position="0 0 -2"
+          rotation="-90 0 0"
+        >
+        </a-plane>
+      </a-marker>
+
+      <a-marker
+        type="pattern"
+        url="pattern-markers/mapapp/pattern-icon-03.patt"
+      >
+        <a-plane
+          src="#navigation"
+          width="2"
+          height="1.5"
+          position="0 0 -2"
+          rotation="-90 0 0"
+        >
+        </a-plane>
+      </a-marker>
+
+      <a-marker
+        type="pattern"
+        url="pattern-markers/restaurant/pattern-icon-02.patt"
+      >
+        <a-plane
+          src="#menu"
+          width="2"
+          height="1.5"
+          position="0 0 -2"
+          rotation="-90 0 0"
+        >
+        </a-plane>
+      </a-marker>
+
+      
+      
+      <a-assets>
+        <img id="flightsim" src="./VR-AR-ProjectCards/2.png" />
+        <img id="tour" src="./VR-AR-ProjectCards/3.png" />
+        <img id="shooting" src="./VR-AR-ProjectCards/4.png" />
+        <img id="navigation" src="./VR-AR-ProjectCards/5.png" />
+        <img id="menu" src="./VR-AR-ProjectCards/6.png" />
+      </a-assets>
+    </a-scene>
+  </body>
+</html>
